@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task: MyString
+  title: MyString
+  notes: MyText
+  completed: 2019-06-07
+
+two:
+  task: MyString
+  title: MyString
+  notes: MyText
+  completed: 2019-06-07
