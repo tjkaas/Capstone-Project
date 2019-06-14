@@ -6,6 +6,7 @@ end
       t.string :content
       t.string :todo_list
       t.string :references
+      t.string :todo_list_id
 
       t.timestamps
     end

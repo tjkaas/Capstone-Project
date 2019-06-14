@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190612163851) do
+ActiveRecord::Schema.define(version: 20190612172107) do
 
   create_table "projects", force: :cascade do |t|
     t.string "task"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20190612163851) do
     t.string "references"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "completed_at"
   end
 
   create_table "todo_lists", force: :cascade do |t|
