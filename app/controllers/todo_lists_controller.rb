@@ -10,6 +10,8 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1
   # GET /todo_lists/1.json
   def show
+    @todo_lists = TodoList.find(params[:id]) 
+    @todo_items = TodoItem.find_by(todo_list: params[:id])
   end
 
   # GET /todo_lists/new
@@ -72,3 +74,4 @@ class TodoListsController < ApplicationController
       params.require(:todo_list).permit(:title, :description)
     end
 end
+

@@ -21,12 +21,15 @@ ActiveRecord::Schema.define(version: 20190614144753) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "todo_lists", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
+  create_table "todo_items", force: :cascade do |t|
+    t.string "content"
+    t.string "todo_list"
+    t.string "references"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "completed_at"
   end
+
 
   create_table "users", force: :cascade do |t|
     t.string "name"
