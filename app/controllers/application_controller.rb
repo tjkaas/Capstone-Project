@@ -1,13 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-<<<<<<< HEAD
   
 def home
-   
 end
-=======
+
+def edit
+    @user = User.find(params[:id])
+end
+
   include SessionsHelper
->>>>>>> 937c57954beb6870e282b3db2e85dcb0dca10a7d
+
 
   private
 

@@ -8,6 +8,6 @@ class CreateProjects < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :projects, [:user_id, :created_at]
+    add_index(:projects, [:created_at])
   end
 end

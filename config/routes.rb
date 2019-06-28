@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :todo_lists
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-<<<<<<< HEAD
+
   root   "users#home"
   get    '/users',        to: 'users#index' 
   get    '/users/edit',   to: 'users#edit'
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post   'users/login',   to: 'sessions#create'
   delete 'users/logout',  to: 'sessions#destroy'
   resources :users
-=======
+
   root "users#new"
   get '/users',       to: 'users#index' 
   get '/users/new',   to: 'users#new'
@@ -26,7 +26,6 @@ resources :todo_lists do
     end
   end
 end
->>>>>>> 937c57954beb6870e282b3db2e85dcb0dca10a7d
 
 
   resources :account_activations, only: [:edit]
