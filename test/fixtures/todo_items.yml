@@ -2,10 +2,10 @@
 
 one:
   content: MyString
-  todo_list: MyString
+  projects: MyString
   references: MyString
 
 two:
   content: MyString
-  todo_list: MyString
+  projects: MyString
   references: MyString

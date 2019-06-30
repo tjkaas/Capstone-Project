@@ -14,7 +14,7 @@ class ProjectControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should redirect destroy when not logged in" do
-    assert_no_difference 'Micropost.count' do
+    assert_no_difference 'Project.count' do
       delete project_path(@project)
     end
     assert_redirected_to login_url

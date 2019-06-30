@@ -10,33 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190614144753) do
+ActiveRecord::Schema.define(version: 20190626162232) do
 
   create_table "projects", force: :cascade do |t|
     t.string "task"
     t.string "title"
     t.text "notes"
     t.date "completed"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "created_at"], name: "index_projects_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "todo_items", force: :cascade do |t|
     t.string "content"
-    t.string "todo_list"
+    t.string "todo_item"
     t.string "references"
+    t.string "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "completed_at"
+    t.integer "projects"
   end
 
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+  create_table "userprojects", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password_digest"
   end
+
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'users' for column 'activated'
 
 end

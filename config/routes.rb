@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :userprojects
   get 'static_pages/home'
 
   resources :todo_lists

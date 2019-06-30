@@ -4,7 +4,7 @@ class ProjectsInterfaceTest < ActionDispatch::IntegrationTest
  
  def setup
     @user = users(:michael)
-  end
+ end
 
   test "project interface" do
     log_in_as(@user)
@@ -29,6 +29,7 @@ class ProjectsInterfaceTest < ActionDispatch::IntegrationTest
     assert_difference 'Project.count', -1 do
       delete project_path(first_project)
     end
+  end
    
    test "project sidebar count" do
     log_in_as(@user)
